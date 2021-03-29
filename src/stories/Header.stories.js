@@ -8,16 +8,19 @@ export default {
 };
 
 const Template = (args) => <Header {...args} />;
+const noop = () => {};
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
   user: {},
-  onLogin: () => {},
-  onLogout: () => {}
+  onLogin: noop,
+  onLogout: noop,
+  onCreateAccount: noop,
 };
 
 export const LoggedOut = Template.bind({});
 LoggedOut.args = {
-  onLogin: () => {},
-  onLogout: () => {}
+  onLogin: noop,
+  onLogout: noop,
+  onCreateAccount: noop,
 };
